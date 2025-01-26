@@ -9,6 +9,11 @@ public class ArrayListGradebook {
 
         ArrayList<String> students = new ArrayList<>();
         ArrayList<Double> grades = new ArrayList<>();
+        ArrayList<Character> charLetters = new ArrayList<>();
+        charLetters.add('a');
+        charLetters.add('b');
+        charLetters.add('c');
+
         Scanner input = new Scanner(System.in);
         String newStudent;
 

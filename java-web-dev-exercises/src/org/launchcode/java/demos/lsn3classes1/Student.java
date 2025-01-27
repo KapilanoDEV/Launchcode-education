@@ -6,9 +6,37 @@ package org.launchcode.java.demos.lsn3classes1;
 public class Student {
 
     private String name;
+    private int studentId;
+    private int numberOfCredits = 0;
+    private double gpa = 0.0;
 
     public String getName() {
         return name;
+    }
+    public void setName(String aName) {
+        name = aName;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+    public int getNumberOfCredits() {
+        return numberOfCredits;
+    }
+
+    private void setNumberOfCredits(int numberOfCredits) {
+        this.numberOfCredits = numberOfCredits;
+    }
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
     }
 
     public Student(String name) {
@@ -22,41 +50,9 @@ public class Student {
         this.gpa = gpa;
     }
 
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
-
-    public int getNumberOfCredits() {
-        return numberOfCredits;
-    }
-
-    private void setNumberOfCredits(int numberOfCredits) {
-        this.numberOfCredits = numberOfCredits;
-    }
-
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
-
     public Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
     }
-
-    public void setName(String aName) {
-        name = aName;
-    }
-
-    private int studentId;
-    private int numberOfCredits = 0;
-    private double gpa = 0.0;
 
 }

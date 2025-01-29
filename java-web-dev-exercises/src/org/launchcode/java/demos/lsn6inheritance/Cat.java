@@ -6,19 +6,20 @@ public class Cat {
     private boolean hungry = false;
     private double weight;
 
-    // The biological family for all cat species
+//
+//    // The biological family for all cat species
     private String family = "Felidae";
-
+//
     public Cat (double aWeight) {
         weight = aWeight;
     }
-
-    public Cat() {
-        weight = 13;
-    }
-
-    /**** Getters and Setters ****/
-
+//
+//    public Cat() {
+//        weight = 13;
+//    }
+//
+//    /**** Getters and Setters ****/
+//
     public boolean isTired() {
         return tired;
     }
@@ -65,8 +66,9 @@ public class Cat {
 
         hungry = false;
     }
-
     public String noise () {
         return "Meeeeeeooooowww!";
     }
+
+//    public abstract String noise ();
 }

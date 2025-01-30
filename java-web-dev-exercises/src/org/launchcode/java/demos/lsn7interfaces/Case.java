@@ -6,12 +6,13 @@ import java.util.Arrays;
 public class Case {
     private ArrayList<Flavor> flavors = new ArrayList<>();
     private ArrayList<Cone> cones = new ArrayList<>();
+    private ArrayList<Topping> toppings = new ArrayList<>();
 
     public Case(){
-        Cone cone1 = new Cone("Waffle", 1.25, new ArrayList<>(Arrays.asList( "gluten")));
-        Cone cone2 = new Cone("Sugar", 0.75, new ArrayList<>(Arrays.asList( "gluten")));
-        Cone cone3 = new Cone("Wafer", 0.50, new ArrayList<>(Arrays.asList( "gluten")));
-        Cone cone4 = new Cone("Bowl", 0.05, new ArrayList<>(Arrays.asList( "none")));
+        Cone cone1 = new Cone("Waffle", 0.05, new ArrayList<>(Arrays.asList( "gluten")));
+        Cone cone2 = new Cone("Sugar", 0.80, new ArrayList<>(Arrays.asList( "gluten")));
+        Cone cone3 = new Cone("Wafer",0.75 , new ArrayList<>(Arrays.asList( "gluten")));
+        Cone cone4 = new Cone("Bowl", 1.25, new ArrayList<>(Arrays.asList( "none")));
         cones.add(cone1);
         cones.add(cone2);
         cones.add(cone3);
@@ -27,6 +28,13 @@ public class Case {
         flavors.add(flavor3);
         flavors.add(flavor4);
         flavors.add(flavor5);
+
+        Topping topping1 = new Topping("Biscoff",0.20,new ArrayList<>(Arrays.asList("soya","nuts","gluten")));
+        Topping topping2 = new Topping("Cereal", 0.18,new ArrayList<>(Arrays.asList("gluten","lupin")));
+        Topping topping3 = new Topping("Hazelnut",0.25,new ArrayList<>(Arrays.asList("nuts")));
+        toppings.add(topping1);
+        toppings.add(topping2);
+        toppings.add(topping3);
     }
 
     public ArrayList<Flavor> getFlavors() {
@@ -37,11 +45,19 @@ public class Case {
         return cones;
     }
 
+    public ArrayList<Topping> getToppings() {
+        return toppings;
+    }
+
     public void setFlavors(ArrayList<Flavor> flavors) {
         this.flavors = flavors;
     }
 
     public void setCones(ArrayList<Cone> cones) {
         this.cones = cones;
+    }
+
+    public void setToppings(ArrayList<Topping> toppings) {
+        this.toppings = toppings;
     }
 }

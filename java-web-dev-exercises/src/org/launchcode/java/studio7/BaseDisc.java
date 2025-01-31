@@ -35,7 +35,8 @@ public class BaseDisc {
     }
 
     public String writeData(int dataSize){
-        if (dataSize > remainingCapacity){
+        if (dataSize > remainingCapacity) {
+
             return "Not enough disc space!";
         }
         capacityUsed += dataSize;

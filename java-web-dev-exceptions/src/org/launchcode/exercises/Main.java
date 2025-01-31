@@ -17,10 +17,12 @@ public class Main {
         studentFiles.put("Brad", "");
         studentFiles.put("Elizabeth", "MyCode.java");
         studentFiles.put("Stefanie", "CoolProgram.java");
+        studentFiles.put("Louis", "accounts.xls");
 
         // Test out your CheckFileExtension() function!
         for (Map.Entry<String, String> student : studentFiles.entrySet()){
-            CheckFileExtension(student.getValue());
+            int points = CheckFileExtension(student.getValue());
+            System.out.println(student.getKey() + " gets " + points);
         }
     }
 
@@ -38,17 +40,19 @@ public class Main {
     public static int CheckFileExtension(String fileName)
     {
         // Write code here!
-        if(fileName == null){
+        if(fileName == null || fileName.isEmpty()){
             try {
-                throw new Exception("Filename is null");
+                throw new Exception("Filename is null or empty");
             } catch (Exception e) {
                 e.printStackTrace();
+                return -1;
             }
         } else if (fileName.endsWith("java")) {
             return 1;
-        } else {
-            return 0;
-        }
+
+        } return 0;
+
+
 
     }
 
